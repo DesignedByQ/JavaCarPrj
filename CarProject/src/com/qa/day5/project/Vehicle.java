@@ -21,6 +21,12 @@ public abstract class Vehicle {
 	public abstract float fixVehicle();
 	
 	
+	@Override
+	public String toString() {
+		return "Vehicle [engType=" + engType + ", engSize=" + engSize + ", vehType=" + vehType + ", manYear=" + manYear
+				+ "]";
+	}
+
 	//Getters and setters
 	public String getEngType() {
 		return engType;
