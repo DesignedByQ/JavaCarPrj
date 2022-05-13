@@ -23,38 +23,24 @@ public class Garage {
 		return orderList;
 	}
 	
+	public void showAll() {
+		for(int i = 0; i < orderList.size(); i++) {
+			System.out.println(orderList.get(i));
+		}
+	}
+	
 	public Vehicle getVehicle(int index) {
 		return orderList.get(index);
 	}
 	
+	public boolean clearVehicles() {
+		orderList.clear();
+		return true;
+	}
 	
-//	public void printAll() {
-//		for(int i = 0; i < orderList.size(); i++) {
-//			System.out.println(orderList.get(i));
-//		}
-//	}
-	
-	
-//	
-//	public static String updateOrder(int index, String order) {
-//		return orders.set(index, order);
-//	}
-//	
-//	public static String getOneOrder(int index) {
-//		return orders.get(index);
-//	}
-//	
-//	
-//	
-//	public static boolean clearOrders() {
-//		orders.clear();
-//		return true;
-//	}
-//	
-	
-	
-	
-	
+	public Vehicle updateVehicle(int index, Vehicle model) {
+		return orderList.set(index, model);
+	}
 	
 	
 }

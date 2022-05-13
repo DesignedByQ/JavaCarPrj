@@ -25,11 +25,19 @@ public class VehicleRunner {
 		quikfit.addVehicle(CamrySE);
 		
 		//quikfit.removeVehicle(1);
+		//System.out.println(quikfit.getVehicles());
+		
+		System.out.println(quikfit.fixTheVehicle(1));
+		
+		quikfit.showAll();
+		
+		quikfit.updateVehicle(0, LexusRX300);
+		
+		quikfit.showAll();
+		
+		System.out.println(quikfit.clearVehicles());
+		
 		System.out.println(quikfit.getVehicles());
-		
-		System.out.println(quikfit.fixTheVehicle(0));
-		
-		//quikfit.printAll();
 	
 	}
 
