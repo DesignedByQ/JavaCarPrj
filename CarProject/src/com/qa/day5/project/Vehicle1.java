@@ -4,13 +4,13 @@ public class Vehicle1 extends Vehicle {
 	
 	//Attributes
 	private boolean existingMOT;
-	private int LastServiced;
+	private int lastServiced;
 	
 	//Constructor	
 	public Vehicle1(String engTypeP, float engSizeP, String vehTypeP, int manYearP, boolean existingMOT, int lastServiced) {
 		super(engTypeP, engSizeP, vehTypeP, manYearP);
 		this.existingMOT = existingMOT;
-		this.LastServiced = lastServiced;
+		this.lastServiced = lastServiced;
 	}
 
 	//Methods
@@ -23,9 +23,9 @@ public class Vehicle1 extends Vehicle {
 			cost += 300f;
 		}
 		
-		if (LastServiced < 2020) {
+		if (lastServiced < 2020) {
 			cost += 150f;
-		} else if (LastServiced > 2020 && LastServiced < 2021) {
+		} else if (lastServiced > 2020 && lastServiced < 2021) {
 			cost += 75f;
 		} 
 		
@@ -76,11 +76,11 @@ public class Vehicle1 extends Vehicle {
 	}
 
 	public int getLastServiced() {
-		return LastServiced;
+		return lastServiced;
 	}
 
 	public void setLastServiced(int lastServiced) {
-		LastServiced = lastServiced;
+		this.lastServiced = lastServiced;
 	}	
 
 	
