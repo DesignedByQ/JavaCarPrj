@@ -18,7 +18,7 @@ public abstract class Vehicle {
 	}
 	
 	//Methods
-	public abstract float fixVehicle(String engTypeP, float engSizeP, String vehTypeP, int manYearP);
+	public abstract float fixVehicle();
 	
 	
 	//Getters and setters

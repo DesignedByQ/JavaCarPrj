@@ -15,7 +15,7 @@ public class Vehicle1 extends Vehicle {
 
 	//Methods
 	@Override
-	public float fixVehicle(String engTypeP, float engSizeP, String vehTypeP, int manYearP) {
+	public float fixVehicle() {
 		
 		float cost = 0;
 		
@@ -29,37 +29,39 @@ public class Vehicle1 extends Vehicle {
 			cost += 75f;
 		} 
 		
-		if (engTypeP == "petrol") {
+		if (getEngType() == "petrol") {
 			cost += 100f;
-		} else if (engTypeP == "diesel") {
+		} else if (getEngType() == "diesel") {
 			cost += 200f;
-		} else if (engTypeP == "electric") {
+		} else if (getEngType() == "electric") {
 			cost += 300f;
 		}
 		
-		if (engSizeP <= 1.4) {
+		if (getEngSize() <= 1.4) {
 			cost += 100f;
-		} else if (engSizeP > 1.4 && engSizeP <= 2) {
+		} else if (getEngSize() > 1.4 && getEngSize() <= 2) {
 			cost += 200f;
-		} else if (engSizeP > 2) {
+		} else if (getEngSize() > 2) {
 			cost += 300f;
 		}
 		
-		if (vehTypeP == "hatchback") {
+		if (getVehType() == "hatchback") {
 			cost += 100f;
-		} else if (vehTypeP == "salon") {
+		} else if (getVehType() == "salon") {
 			cost += 200f;
-		} else if (vehTypeP == "SUV") {
+		} else if (getVehType() == "SUV") {
 			cost += 300f;
 		}
 		
-		if (manYearP > 2020) {
+		if (getManYear() > 2020) {
 			cost += 100f;
-		} else if (manYearP < 2020 && manYearP > 2010) {
+		} else if (getManYear() < 2020 && getManYear() > 2010) {
 			cost += 200f;
-		} else if (manYearP < 2010) {
+		} else if (getManYear() < 2010) {
 			cost += 300f;
 		}
+		
+		System.out.print("The total cost to fix this vehicle is £");
 		
 		return cost;
 	}
